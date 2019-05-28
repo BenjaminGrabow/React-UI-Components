@@ -15,6 +15,13 @@ const App = () => {
     // we update the state, update the input(userInput) and we say its equal to the current input + the val
   }
 
+  const giveTheResult = () => {
+    updateUserInput(eval(userInput))
+    //The eval() function evaluates JavaScript code represented as a string -> 
+    //the console displays that eval could be harmful /
+    //functionality goes but sometimes browser crashed 
+  }
+
   const makeInputClear = () => {
     updateUserInput("");
     //triggers when the clear button get's clicked and updates the state(userInput) to empty again
@@ -46,7 +53,7 @@ const App = () => {
         <div className="row">
           <NumberAndOperatorButton handleClick={addToInput}>.</NumberAndOperatorButton>
           <NumberAndOperatorButton handleClick={addToInput}>0</NumberAndOperatorButton>
-          <NumberAndOperatorButton handleClick={addToInput}>=</NumberAndOperatorButton>
+          <NumberAndOperatorButton handleClick={giveTheResult}>=</NumberAndOperatorButton>
           <NumberAndOperatorButton handleClick={addToInput}>-</NumberAndOperatorButton>
         </div>
         <div className="row">
