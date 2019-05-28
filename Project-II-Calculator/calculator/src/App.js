@@ -7,13 +7,13 @@ import { ClearButton } from "./components/ButtonComponents/ClearButton";
 const App = () => {
 
   const [userInput, updateUserInput] = useState("");
-  //we create a state -> the first item which is userInput represents the the the empty string which got created with useState("")
-  // the second item which id updateUserInput is only for updating the first item(userInput)
+  //we create a state -> the first item which is userInput represents the empty string which got created with useState("")
+  // the second item which is updateUserInput is only for updating the first item(userInput)
   // we need the userInput for displaying the input in our input element and to get the result and make the input clear again with our functions
 
- const addToInput = val => {
-   console.log(userInput);
-   //console.log(val) = the props.children(1,2,3,4,+,- ....)
+  const addToInput = val => {
+    console.log(userInput);
+    //console.log(val) = the props.children(1,2,3,4,+,- ....)
     updateUserInput(userInput + val);
     // we update the state, update the input(userInput) and we say its equal to the current input + the val
   }
