@@ -37,26 +37,16 @@ const App = () => {
         {/* We say the display is equal to the userInput which got created at the top */}
         <div className="row">
         {/* USE THIS TO DONT HAVE DRY CODE !!! {[7, 8, 9, "/"].map(number => <NumberAndOperatorButton handleClick={addToInput}>{number}</NumberAndOperatorButton>)};  */}
-          <NumberAndOperatorButton handleClick={addToInput}>7</NumberAndOperatorButton>
-          <NumberAndOperatorButton handleClick={addToInput}>8</NumberAndOperatorButton>
-          <NumberAndOperatorButton handleClick={addToInput}>9</NumberAndOperatorButton>
-          <NumberAndOperatorButton handleClick={addToInput}>/</NumberAndOperatorButton>
+        {[7, 8, 9, "/"].map(number => <NumberAndOperatorButton handleClick={addToInput} children={number} />)}
         </div>
         <div className="row">
-          <NumberAndOperatorButton handleClick={addToInput}>4</NumberAndOperatorButton>
-          <NumberAndOperatorButton handleClick={addToInput}>5</NumberAndOperatorButton>
-          <NumberAndOperatorButton handleClick={addToInput}>6</NumberAndOperatorButton>
-          <NumberAndOperatorButton handleClick={addToInput}>*</NumberAndOperatorButton>
+        {[4, 5, 6, "*"].map(number => <NumberAndOperatorButton handleClick={addToInput} children={number} />)}
         </div>
         <div className="row">
-          <NumberAndOperatorButton handleClick={addToInput}>1</NumberAndOperatorButton>
-          <NumberAndOperatorButton handleClick={addToInput}>2</NumberAndOperatorButton>
-          <NumberAndOperatorButton handleClick={addToInput}>3</NumberAndOperatorButton>
-          <NumberAndOperatorButton handleClick={addToInput}>+</NumberAndOperatorButton>
+        {[1, 2, 3, "+"].map(number => <NumberAndOperatorButton handleClick={addToInput} children={number} />)}
         </div>
         <div className="row">
-          <NumberAndOperatorButton handleClick={addToInput}>.</NumberAndOperatorButton>
-          <NumberAndOperatorButton handleClick={addToInput}>0</NumberAndOperatorButton>
+        {[".", 0].map(number => <NumberAndOperatorButton handleClick={addToInput} children={number} />)}
           <NumberAndOperatorButton handleClick={giveTheResult}>=</NumberAndOperatorButton>
           <NumberAndOperatorButton handleClick={addToInput}>-</NumberAndOperatorButton>
         </div>
