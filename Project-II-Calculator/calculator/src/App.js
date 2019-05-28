@@ -7,6 +7,9 @@ import { ClearButton } from "./components/ButtonComponents/ClearButton";
 const App = () => {
 
   const [userInput, updateUserInput] = useState("");
+  //we create a state -> the first item which is userInput represents the the the empty string which got created with useState("")
+  // the second item which id updateUserInput is only for updating the first item(userInput)
+  // we need the userInput for displaying the input in our input element and to get the result and make the input clear again with our functions
 
  const addToInput = val => {
    console.log(userInput);
@@ -30,8 +33,8 @@ const App = () => {
   return (
     <div className="app">
       <div className="calc-wrapper">
-        <Input input={userInput}></Input>
-        {/* We say the display is equal the userInput which got created at the top */}
+        <Input input={userInput} />
+        {/* We say the display is equal to the userInput which got created at the top */}
         <div className="row">
           <NumberAndOperatorButton handleClick={addToInput}>7</NumberAndOperatorButton>
           <NumberAndOperatorButton handleClick={addToInput}>8</NumberAndOperatorButton>
