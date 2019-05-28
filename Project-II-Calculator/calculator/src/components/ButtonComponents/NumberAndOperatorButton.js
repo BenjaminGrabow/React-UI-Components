@@ -6,7 +6,7 @@ const ButtonIsOperator = val => {
         // If is it not not a number(if is it a number) or is it a "." or "=" -> return true;
 }
 
-export const NumberAndOperatorButton = props => (<div
+export const NumberAndOperatorButton = (props) => (<div
         // give it a class of button-wrapper
         className={`button-wrapper 
 ${ButtonIsOperator(props.children) ? null : "operator"}`}
