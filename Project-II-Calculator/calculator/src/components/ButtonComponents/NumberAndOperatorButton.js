@@ -9,7 +9,7 @@ const ButtonIsOperator = val => {
 export const NumberAndOperatorButton = (props) => (<div
         // give it a class of button-wrapper
         className={`button-wrapper 
-${ButtonIsOperator(props.children) ? null : "operator"}`}
+${ButtonIsOperator(props.children) ? null : "operator"}`} key={props.children}
         //Inline If-Else with Conditional Operator
         // method for conditionally rendering elements inline is to
         // use the JavaScript conditional operator condition ? true : false

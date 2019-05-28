@@ -2,7 +2,7 @@ import React from 'react';
 import './Button.css';
 
 export const ClearButton = props => (
-        <div className="clear-button" onClick={props.handleClear}>
+        <div className="clear-button" onClick={props.handleClear} key={props.children}>
                 {props.children}
                 {/* same funcionality like in numberButton.js */}
         </div>

@@ -37,21 +37,21 @@ const App = () => {
         {/* We say the display is equal to the userInput which got created at the top */}
         <div className="row">
         {/* USE THIS TO DONT HAVE DRY CODE !!! {[7, 8, 9, "/"].map(number => <NumberAndOperatorButton handleClick={addToInput}>{number}</NumberAndOperatorButton>)};  */}
-        {[7, 8, 9, "/"].map(number => <NumberAndOperatorButton handleClick={addToInput} children={number} />)}
+        {[7, 8, 9, "/"].map(number => <NumberAndOperatorButton handleClick={addToInput} children={number} key={number} />)}
         </div>
         <div className="row">
-        {[4, 5, 6, "*"].map(number => <NumberAndOperatorButton handleClick={addToInput} children={number} />)}
+        {[4, 5, 6, "*"].map(number => <NumberAndOperatorButton handleClick={addToInput} children={number} key={number} />)}
         </div>
         <div className="row">
-        {[1, 2, 3, "+"].map(number => <NumberAndOperatorButton handleClick={addToInput} children={number} />)}
+        {[1, 2, 3, "+"].map(number => <NumberAndOperatorButton handleClick={addToInput} children={number} key={number} />)}
         </div>
         <div className="row">
-        {[".", 0].map(number => <NumberAndOperatorButton handleClick={addToInput} children={number} />)}
-          <NumberAndOperatorButton handleClick={giveTheResult}>=</NumberAndOperatorButton>
-          <NumberAndOperatorButton handleClick={addToInput}>-</NumberAndOperatorButton>
+        {[".", 0].map(number => <NumberAndOperatorButton handleClick={addToInput} children={number} key={number} />)}
+          <NumberAndOperatorButton handleClick={giveTheResult} key={500}>=</NumberAndOperatorButton>
+          <NumberAndOperatorButton handleClick={addToInput} key={30}>-</NumberAndOperatorButton>
         </div>
         <div className="row">
-          <ClearButton handleClear={makeInputClear}>Clear</ClearButton>
+          <ClearButton handleClear={makeInputClear} key={20}>Clear</ClearButton>
         </div>
       </div>
     </div>
